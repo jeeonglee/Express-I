@@ -1,10 +1,10 @@
 const { Router } = require("express")
 const express = require("express")
+const ProdutoController = require("../controllers/ProdutoController")
 
 const router = express.Router()
 
-router.get("/criar", (req, res)=> res.send("Criando um produto"))
-router.get("/deletar", (req, res)=> res.send("Deletando um produto"))
-router.get("/MochilaNike", (req, res)=> res.send("Produto Mochila Nike"))
+router.get("/criar", ProdutoController.criarProduto)
+router.get("/deletar", ProdutoController.deletarProduto)
 
 module.exports = router
